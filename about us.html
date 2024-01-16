@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文書のメタデータを設定する -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- サイトのタイトルを設定 -->
+    <title>会社概要</title>
+
+    <!-- サイトの説明を設定 -->
+    <meta
+      name="description"
+      content="〇〇〇〇株式会社の会社概要のページです。"
+    />
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="./js/action.js"></script>
+
+    <!-- 共通のスタイルシートを読み込む -->
+    <link href="./css/common.css" rel="stylesheet" />
+
+    <!-- このページ専用のスタイルシートを読み込む -->
+    <link href="./css/about us.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- headerここから -->
+    <header class="header">
+      <div class="header-inner">
+        <!-- ヘッダーロゴエリア -->
+        <a class="header-logo" href="./index.html">
+          <img src="./images/common/logo-header.png" alt="会社のロゴ" />
+        </a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button class="toggle-menu-button"></button>
+
+        <!-- サイトのナビゲーションエリア -->
+        <div class="header-site-menu">
+          <nav class="site-menu">
+            <!-- 各ページへのリンク -->
+            <ul>
+              <li class="nav-link">
+                <a href="./index.html"><span>Top</span>トップ</a>
+              </li>
+              <li class="nav-link">
+                <a href="./service.html"
+                  ><span>Product&Service</span>製品・サービス</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="./about us.html"><span>About Us</span>会社概要</a>
+              </li>
+              <li class="nav-link">
+                <a href="./inquiry.php"><span>Contact Us</span>お問い合わせ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- headerここまで -->
+
+    <!-- 背景設定用のdiv -->
+    <div class="content-background">
+      <!-- mainここから -->
+      <main class="main">
+        <!-- ページタイトル -->
+        <h1 class="heading">会社概要について</h1>
+
+        <!-- 会社概要セクション: 会社の詳細な情報をテーブル形式で表示 -->
+        <div class="gaiyou">
+          <table>
+            <tbody>
+              <tr>
+                <!-- 会社の名前 -->
+                <th scope="row">名称</th>
+                <td>〇〇〇〇株式会社</td>
+              </tr>
+              <tr>
+                <!-- 会社の本社所在地 -->
+                <th scope="row">本社所在地</th>
+                <td>〇〇県〇〇市〇〇町〇番地〇</td>
+              </tr>
+              <tr>
+                <!-- 会社の代表者 -->
+                <th scope="row">代表者</th>
+                <td>代表取締役社長 &nbsp;〇〇&nbsp;〇〇</td>
+              </tr>
+              <tr>
+                <!-- 会社の設立(創業) -->
+                <th scope="row">設立</th>
+                <td>20xx年〇月（創業&nbsp;20xx年〇月）</td>
+              </tr>
+              <tr>
+                <!-- 会社の売上高 -->
+                <th scope="row">売上高</th>
+                <td>〇〇〇百万円</td>
+              </tr>
+              <tr>
+                <!-- 会社の資本金 -->
+                <th scope="row">資本金</th>
+                <td>〇百万円</td>
+              </tr>
+              <tr>
+                <!-- 会社の従業員数 -->
+                <th scope="row">従業員数</th>
+                <td>〇〇名</td>
+              </tr>
+              <tr>
+                <!-- 会社の業務内容 -->
+                <th scope="row">業務内容</th>
+                <td>
+                  <ul>
+                    <li>〇〇〇〇</li>
+                    <li>〇〇〇〇</li>
+                    <li>〇〇〇〇</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <!-- 会社の関連子会社 -->
+                <th scope="row">関連子会社</th>
+                <td>
+                  〇〇株式会社<br />
+                  株式会社〇〇<br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- これらの情報がいつ更新されたのか -->
+          <p style="text-align: right">（20xx年〇月現在）</p>
+        </div>
+
+        <!-- 役員セクション -->
+        <h2 class="sub-heading">役員一覧</h2>
+        <div class="torishimariyaku">
+          <table>
+            <tbody>
+              <tr>
+                <th>役職</th>
+                <th>氏名</th>
+              </tr>
+              <tr>
+                <td>代表取締役社長</td>
+                <td>〇〇&nbsp;〇〇</td>
+              </tr>
+              <tr>
+                <td>代表取締役副社長</td>
+                <td>〇〇&nbsp;〇〇</td>
+              </tr>
+              <tr>
+                <td>常務取締役</td>
+                <td>〇〇&nbsp;〇〇（〇〇〇〇〇〇担当）</td>
+              </tr>
+              <tr>
+                <td>取締役</td>
+                <td>〇〇&nbsp;〇〇（〇〇〇〇〇〇担当）</td>
+              </tr>
+              <tr>
+                <td>取締役</td>
+                <td>〇〇&nbsp;〇〇</td>
+              </tr>
+              <tr>
+                <td>取締役</td>
+                <td>〇〇&nbsp;〇〇</td>
+              </tr>
+              <tr>
+                <td>取締役</td>
+                <td>〇〇&nbsp;〇〇</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!-- mainここまで -->
+    </div>
+    <!-- footerここから -->
+    <footer class="footer">
+      <!-- フッターナビゲーション -->
+      <nav class="site-menu">
+        <ul>
+          <li class="nav-link">
+            <a href="./index.html"><span>Top</span>トップ</a>
+          </li>
+          <li class="nav-link">
+            <a href="./service.html"
+              ><span>Product&Service</span>製品・サービス</a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="./about us.html"><span>About Us</span>会社概要</a>
+          </li>
+          <li class="nav-link">
+            <a href="./inquiry.php"><span>Contact Us</span>お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- フッターロゴ -->
+      <a class="footer-logo" href="./index.html">
+        <img src="./images/common/logo-footer.png" alt="会社のロゴ" />
+      </a>
+
+      <!-- フッター内の情報 -->
+      <p class="footer-tel">TEL 01-2345-6789</p>
+      <p class="footer-time">勤務時間(営業時間):9:00~18:00</p>
+
+      <!-- 著作権情報 -->
+      <p class="copyright"><small>&copy;〇〇〇〇株式会社</small></p>
+    </footer>
+    <!-- footerここまで -->
+  </body>
+</html>

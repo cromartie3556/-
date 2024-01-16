@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* お礼メッセージのラッパー要素のスタイル設定 */
+.thankyou-wrapper {
+  text-align: center; /* テキストを中央揃え */
+  padding: 50px; /* パディング設定 */
+}
+
+/* お礼メッセージ見出しのスタイリング */
+.thankyou-wrapper h1 {
+  font-size: 32px; /* フォントサイズ */
+  margin-bottom: 20px; /* 下マージン */
+}
+
+/* お礼メッセージ段落のスタイリング */
+.thankyou-wrapper p {
+  font-size: 18px; /* フォントサイズ */
+  margin-bottom: 30px; /* 下マージン */
+}
+
+/* 戻るボタンのスタイル */
+.return-button {
+  display: inline-block; /* インラインブロック表示 */
+  padding: 10px 20px; /* パディング設定 */
+  background-color: blue; /* 背景色 */
+  color: #ffffff; /* 文字色 */
+  text-decoration: none; /* テキスト装飾を無効化 */
+  border-radius: 5px; /* 角丸設定 */
+  font-size: 16px; /* フォントサイズ */
+  transition: all 0.3s ease-in-out; /* トランジション効果 */
+}
+
+/* 戻るボタンのホバー時のスタイル */
+.return-button:hover {
+  transform: scale(1.1); /* サイズを拡大 */
+  background-color: red; /* 背景色を変更 */
+}
+
+/* タブレットサイズのデバイスに対するメディアクエリ */
+@media screen and (max-width: 768px) {
+  .thankyou-wrapper {
+    padding: 30px; /* パディングを調整 */
+  }
+
+  .thankyou-wrapper h1 {
+    font-size: 28px; /* フォントサイズを調整 */
+  }
+
+  .thankyou-wrapper p {
+    font-size: 16px; /* フォントサイズを調整 */
+  }
+
+  .return-button {
+    padding: 8px 15px; /* パディングを調整 */
+    font-size: 14px; /* フォントサイズを調整 */
+  }
+}

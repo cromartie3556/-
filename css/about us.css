@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* 見出しのスタイル設定 */
+.heading {
+  background-color: lightblue; /* 背景色 */
+  padding-top: 25px; /* 上のパディング */
+  padding-bottom: 15px; /* 下のパディング */
+  width: 100%; /* 幅を100%に設定 */
+  font-size: 28px; /* フォントサイズ */
+  text-align: center; /* テキストを中央揃え */
+  /* 背景にリニアグラデーションを設定 */
+  background-image: linear-gradient(
+    90deg,
+    #c7c7c7 0%,
+    #c7c7c7 40.5%,
+    #09ff00 40.5%,
+    #09ff00 59.5%,
+    #c7c7c7 59.5%,
+    #c7c7c7 100%
+  );
+  background-size: 60% 5px; /* 背景サイズ */
+  background-repeat: no-repeat; /* 背景を繰り返さない */
+  background-position: center bottom; /* 背景位置 */
+}
+
+/* 概要セクションのスタイル設定 */
+.gaiyou {
+  background-color: #ffffff; /* 背景色 */
+  padding: 30px; /* パディング */
+  width: 60%; /* 幅 */
+  border-collapse: collapse; /* ボーダーの崩れを防ぐ */
+  margin: auto; /* 中央に配置 */
+}
+
+/* 概要セクション内のテーブルのスタイル設定 */
+.gaiyou table {
+  width: 100%; /* 幅を100%に設定 */
+}
+
+/* 概要セクション内のthとtdのスタイル設定 */
+.gaiyou th,
+.gaiyou td {
+  border: 1px solid #ccc; /* ボーダー設定 */
+  padding: 10px; /* パディング */
+  text-align: left; /* テキストを左揃え */
+  vertical-align: top; /* 垂直方向の位置 */
+}
+
+/* 概要セクション内のthのスタイル設定 */
+.gaiyou th {
+  background-color: #f7f7f7; /* 背景色 */
+  font-weight: bold; /* 太字 */
+}
+
+/* 概要セクション内のリストのスタイル設定 */
+.gaiyou td ul {
+  list-style-type: disc; /* リストのスタイルタイプ */
+  padding-left: 20px; /* 左のパディング */
+  margin-top: 0; /* 上のマージン */
+  margin-bottom: 0; /* 下のマージン */
+}
+
+/* 概要セクション内のリストアイテムのスタイル設定 */
+.gaiyou td ul li {
+  margin-bottom: 5px; /* 下のマージン */
+}
+
+/* パラグラフのスタイル設定 */
+p {
+  text-align: right; /* テキストを右揃え */
+  margin-top: 20px; /* 上のマージン */
+  font-size: 0.9em; /* フォントサイズ */
+}
+
+/* サブ見出しのスタイル設定 */
+.sub-heading {
+  background-color: lightblue; /* 背景色 */
+  padding-top: 70px; /* 上のパディング */
+  padding-bottom: 15px; /* 下のパディング */
+  width: 100%; /* 幅を100%に設定 */
+  font-size: 28px; /* フォントサイズ */
+  text-align: left; /* テキストを左揃え */
+  padding-left: 385px; /* 左のパディング */
+  /* 背景にリニアグラデーションを設定 */
+  background-image: linear-gradient(
+    90deg,
+    #c7c7c7 0%,
+    #c7c7c7 0.1%,
+    #09ff00 0.1%,
+    #09ff00 10%,
+    #c7c7c7 10%,
+    #c7c7c7 100%
+  );
+  background-size: 60% 5px; /* 背景サイズ */
+  background-repeat: no-repeat; /* 背景を繰り返さない */
+  background-position: center bottom; /* 背景位置 */
+}
+
+/* 取締役のスタイル設定 */
+.torishimariyaku {
+  background-color: #ffffff; /* 背景色 */
+  padding: 30px; /* パディング */
+  width: 60%; /* 幅 */
+  border-collapse: collapse; /* ボーダーの崩れを防ぐ */
+  margin: auto; /* 中央に配置 */
+}
+
+/* 取締役のテーブルのスタイル設定 */
+.torishimariyaku table {
+  width: 100%; /* 幅を100%に設定 */
+  table-layout: fixed; /* テーブルのレイアウトを固定 */
+}
+
+/* 取締役のテーブル内の最初の列のスタイル設定 */
+.torishimariyaku th:first-child,
+.torishimariyaku td:first-child {
+  width: 35%; /* 幅を35%に設定 */
+}
+
+/* 取締役のthとtdのスタイル設定 */
+.torishimariyaku th,
+.torishimariyaku td {
+  border: 1px solid #ccc; /* ボーダー設定 */
+  padding: 10px; /* パディング */
+  text-align: left; /* テキストを左揃え */
+  vertical-align: top; /* 垂直方向の位置 */
+}
+
+/* 取締役のthのスタイル設定 */
+.torishimariyaku th {
+  background-color: #f7f7f7; /* 背景色 */
+  font-weight: bold; /* 太字 */
+}
+
+/* 取締役のリストのスタイル設定 */
+.torishimariyaku td ul {
+  list-style-type: disc; /* リストのスタイルタイプ */
+  padding-left: 20px; /* 左のパディング */
+  margin-top: 0; /* 上のマージン */
+  margin-bottom: 0; /* 下のマージン */
+}
+
+/* 取締役のリストアイテムのスタイル設定 */
+.torishimariyaku td ul li {
+  margin-bottom: 5px; /* 下のマージン */
+}
+
+/* 背景のスタイル設定 */
+.content-background {
+  background-color: lightblue; /* 背景色を設定 */
+}
+
+/* 画面幅が768px以下のデバイスのためのメディアクエリ */
+@media (max-width: 768px) {
+  /* 概要セクションと取締役会セクションの幅を100%に設定 */
+  .gaiyou,
+  .torishimariyaku {
+    width: 100%;
+  }
+
+  /* ヘッダー見出しのスタイル調整 */
+  .heading {
+    background-image: linear-gradient(
+      90deg,
+      #09ff00,
+      #09ff00
+    ); /* 背景画像を単色のグラデーションに変更 */
+  }
+
+  /* サブ見出しのスタイル調整 */
+  .sub-heading {
+    padding-left: 0; /* 左のパディングをゼロに設定 */
+    text-align: center; /* テキストを中央揃えに設定 */
+    background-image: linear-gradient(
+      90deg,
+      #09ff00,
+      #09ff00
+    ); /* 背景画像を単色のグラデーションに変更 */
+  }
+
+  /* 概要セクションと取締役セクションのテーブルのスタイル調整 */
+  .gaiyou table,
+  .torishimariyaku table {
+    width: auto; /* 幅を自動に設定 */
+    display: block; /* ブロック表示に変更 */
+    overflow-x: auto; /* 横方向のスクロールバーを表示 */
+  }
+
+  /* 取締役のテーブル内の最初の列の幅を自動に設定 */
+  .torishimariyaku th:first-child,
+  .torishimariyaku td:first-child {
+    width: auto; /* 固定幅を解除 */
+  }
+}

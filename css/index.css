@@ -1,0 +1,421 @@
+@charset "utf-8";
+
+/* ローディング画面全体を覆うスタイル */
+.loading {
+  position: fixed; /* 位置を固定 */
+  top: 0; /* 上端から */
+  left: 0; /* 左端から */
+  width: 100%; /* 幅を全体に */
+  height: 100%; /* 高さを全体に */
+  background-color: blue; /* 背景色を青に */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 水平方向の中央寄せ */
+  align-items: center; /* 垂直方向の中央寄せ */
+  z-index: 9999; /* 他の要素の上に表示 */
+  opacity: 1; /* 初期状態では不透明 */
+  transition: opacity 2s ease-out; /* 透明度の変化にトランジションを設定 */
+}
+
+/* ローディングテキストのスタイル */
+.loading-content {
+  color: white; /* 文字色を白に */
+  font-size: 2em; /* フォントサイズを大きく */
+  transition: opacity 2s ease-out; /* 透明度の変化にトランジションを設定 */
+}
+
+/* ファーストビューのスタイル */
+.first-view {
+  height: calc(100vh - 110px); /* 高さをビューポートの高さから110px引いた値に */
+  background-image: url(images/index/main1.jpg); /* 背景画像 */
+  transition: background-image 0.5s ease-in-out; /* 背景画像のトランジション */
+  background-repeat: no-repeat; /* 背景画像の繰り返しを無効化 */
+  background-position: center center; /* 背景画像の位置 */
+  background-size: cover; /* 背景画像をカバーするように設定 */
+  display: flex; /* フレックスボックスを使用 */
+  align-items: center; /* 垂直方向の中央寄せ */
+}
+
+/* ファーストビュー内のテキストスタイル */
+.first-view-text {
+  width: 100%; /* 幅を100%に */
+  max-width: 1200px; /* 最大幅を1200pxに */
+  margin-left: auto; /* 左マージンを自動に */
+  margin-right: auto; /* 右マージンを自動に */
+  padding-left: 40px; /* 左パディング */
+  padding-bottom: 80px; /* 下パディング */
+  color: #ffffff; /* 文字色を白に */
+  font-weight: bold; /* フォントを太字に */
+  text-shadow: 1px 1px 10px #4b2c14; /* テキストに影を追加 */
+}
+
+/* ファーストビュー内の見出しスタイル */
+.first-view-text h1 {
+  font-size: 56px; /* フォントサイズ */
+  line-height: 72px; /* 行の高さ */
+  text-align: center; /* テキストを中央揃えに */
+}
+
+/* ファーストビュー内の段落スタイル */
+.first-view-text p {
+  font-size: 18px; /* フォントサイズ */
+  margin-top: 20px; /* 上マージン */
+  text-align: center; /* テキストを中央揃えに */
+}
+
+/* services-overview セクション全体のスタイリング */
+.services-overview {
+  transform: translateY(0px); /* 下に少し移動 */
+  opacity: 1; /* アニメーションの終了時に表示される状態 */
+  transition: opacity 3s, transform 3s; /* アニメーションの効果と時間 */
+  text-align: center; /* テキストを中央揃えに */
+  padding: 50px 0; /* 上下パディング */
+  align-items: center; /* 横方向に中央揃え */
+  justify-content: center; /* 縦方向に中央揃え */
+  height: 100vh; /* ビューポートの高さに合わせる */
+  padding-top: 10%; /* 上のパディングを10%に設定 */
+}
+
+/* .services-overviewセクションが非表示のときのスタイル */
+.services-overview.not-visible {
+  opacity: 0; /* 透明に設定し、見えなくする */
+  visibility: hidden; /* 完全に非表示にする */
+  transform: translateY(
+    150px
+  ); /* Y軸方向に150ピクセル下に移動し、スムーズな表示変化を作る */
+}
+
+/* サービスのタイトル */
+.services-overview h2 {
+  font-size: 36px; /* フォントサイズを36pxに設定 */
+  margin-bottom: 50px; /* 下のマージンを50pxに設定 */
+}
+
+/* サービス一覧のグリッド表示 */
+.services-grid {
+  display: grid; /* グリッドレイアウトを使用 */
+  grid-template-columns: repeat(3, 1fr); /* 3列のグリッドを作成 */
+  gap: 50px; /* グリッドアイテム間のギャップ */
+  width: 50%; /* 幅を全体の80%の幅を占めるように設定 */
+  margin: 0 auto; /* 水平方向に中央に配置 */
+}
+
+/* 各サービスのスタイリング */
+.service-item {
+  background-color: #fff; /* 白背景 */
+  padding: 20px; /* パディング */
+  border-radius: 8px; /* 角丸設定 */
+  transition: transform 0.3s ease; /* トランスフォームのトランジションを設定 */
+}
+
+/* サービスアイテムのホバー時のスタイル */
+.service-item:hover {
+  transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+/* サービスアイコンのスタイル */
+.service-icon img {
+  width: 50px; /* 画像サイズ */
+  margin-bottom: 20px; /* 下マージン */
+}
+
+/* サービスアイテムのタイトルのスタイル */
+.service-item h3 {
+  font-size: 24px; /* フォントサイズ */
+  margin-bottom: 20px; /* 下マージン */
+}
+
+/* サービスの詳細ボタンのスタイル */
+.service-contact-button {
+  margin-top: 50px; /* 上マージン */
+}
+
+/* サービスの詳細ボタンリンクのスタイル */
+.service-contact-button a {
+  display: inline-block; /* インラインブロック表示 */
+  padding: 15px 30px; /* パディング */
+  background-color: #000; /* 黒背景 */
+  color: #fff; /* 文字は白色 */
+  border-radius: 8px; /* 角丸設定 */
+  text-decoration: none; /* テキスト装飾を無効化 */
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+}
+
+/* サービスの詳細ボタンリンクのホバー時のスタイル */
+.service-contact-button a:hover {
+  background-color: #333; /* 背景色を暗くする */
+}
+
+/* Flexboxを使用して中央寄せ */
+.content {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: space-between; /* アイテム間に均等なスペース */
+  align-items: flex-start; /* アイテムを縦方向の開始点に揃える */
+  text-align: justify; /* テキストを両端揃え */
+  height: 65vh; /* 高さをビューポートの60%に設定 */
+  margin: 0 auto; /* 水平方向に中央寄せ */
+  max-width: 1200px; /* 最大幅を1200pxに設定 */
+  gap: 20px; /* アイテム間のギャップ */
+  padding-left: 20px; /* 左側のパディング */
+}
+
+/* 画像セクションのスタイル */
+.image {
+  margin-left: 20px; /* 左側のマージン */
+  width: 50%; /* 幅を50%に設定 */
+  height: auto; /* 高さを自動調整 */
+  opacity: 0; /* 初期状態では透明 */
+  transform: translateX(200px); /* 右からフェードインするように設定 */
+  transition: opacity 3s ease-out, transform 3s ease-out; /* トランジション効果 */
+}
+
+/* 画像タグのスタイル */
+.image img {
+  width: 100%; /* 画像の幅を100%に設定 */
+  max-width: 100%; /* 最大幅をコンテナの幅に合わせる */
+  height: auto; /* 高さを自動調整 */
+}
+
+/* メッセージセクションのスタイル */
+.message {
+  font-size: 4em; /* フォントサイズを大きく設定 */
+  flex-grow: 1; /* フレックスアイテムが空いているスペースを埋めるように設定 */
+  text-align: center; /* テキストを中央揃え */
+  white-space: nowrap; /* テキストの折り返しを防ぐ */
+  margin-top: 70px; /* 上のマージン */
+}
+
+/* テキストブロックのスタイル */
+.text {
+  writing-mode: vertical-rl; /* テキストを縦書きに設定 */
+  opacity: 0; /* 初期状態では透明 */
+  transform: translateX(-200px); /* 左からフェードインするように設定 */
+  transition: opacity 3s ease-out, transform 3s ease-out; /* トランジション効果 */
+  margin-left: 50px; /* 左側のマージン */
+  position: relative; /* 相対位置 */
+}
+
+/* about usボタンのスタイル */
+.aboutus-button {
+  display: inline-block; /* インラインブロックとして表示 */
+  background-color: #000; /* 背景色を黒に設定 */
+  color: white; /* 文字色を白に設定 */
+  padding: 15px 20px; /* パディングを設定 */
+  font-size: 1em; /* フォントサイズ */
+  cursor: pointer; /* カーソルをポインタに設定 */
+  border-radius: 10px; /* 角を丸くする */
+  text-decoration: none; /* テキストの下線を消す */
+  position: absolute; /* 絶対位置 */
+  left: -90px; /* 左からの位置 */
+  top: 30%; /* 上からの位置 */
+  transition: background-color 0.3s ease; /* 背景色のトランジション効果 */
+}
+
+/* about usボタンのホバー時のスタイル */
+.aboutus-button:hover {
+  background-color: #333; /* 背景色を暗くする */
+}
+
+/* パラグラフの行間隔のスタイル */
+.text p {
+  line-height: 3; /* 行間隔を広げる */
+}
+
+/* スクロール時のフェードインアニメーション用のスタイル */
+.fade-in {
+  opacity: 1; /* 完全に不透明に */
+  transform: translateX(0); /* 元の位置に */
+}
+
+/* トップに戻るボタンのスタイル */
+#scrollToTopButton {
+  display: inline-block; /* インラインブロック要素として表示 */
+  margin: 10px 0; /* 上下に10pxのマージン */
+  padding: 15px 30px; /* パディング */
+  background-color: #007bff; /* ボタンの背景色 */
+  color: white; /* テキストの色 */
+  text-decoration: none; /* テキストの下線を消す */
+  border: none; /* ボーダーをなくす */
+  border-radius: 5px; /* 角を丸くする */
+  cursor: pointer; /* ホバー時のカーソルを指にする */
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+  font-size: 1.5em;
+}
+
+/* トップに戻るボタンのホバー時のスタイル */
+#scrollToTopButton:hover {
+  background-color: #0056b3; /* ホバー時の背景色を暗くする */
+}
+
+/* コンテンツの背景色を設定 */
+.content-background {
+  background-color: lightblue; /* 軽い青色の背景 */
+}
+
+/* ラストビューセクションのスタイル */
+.last-view {
+  background-image: url("../images/index/ufo.jpg"); /* UFOの背景画像を設定 */
+  background-size: cover; /* 背景画像をカバーするように設定 */
+  background-position: center; /* 背景画像を中央に配置 */
+  padding: 100px 0; /* 上下のパディングを100pxに設定 */
+  text-align: center; /* テキストを中央揃えに設定 */
+  color: #fff; /* テキストの色を白に設定 */
+}
+
+/* ラストビューセクション内のh2タグのスタイル */
+.last-view-text h2 {
+  font-size: 2.5em; /* フォントサイズを大きく設定 */
+  margin-bottom: 20px; /* 下のマージンを設定 */
+}
+
+/* ラストビューセクション内のpタグのスタイル */
+.last-view-text p {
+  font-size: 1.2em; /* フォントサイズを設定 */
+  margin-bottom: 40px; /* 下のマージンを設定 */
+}
+
+/* ブックシェルフボタンのスタイル */
+.book-shelf-buttons .button {
+  display: inline-block; /* インラインブロックとして表示 */
+  margin: 0 10px; /* 左右のマージンを設定 */
+  padding: 10px 20px; /* パディングを設定 */
+  background-color: #000; /* 背景色を黒に設定 */
+  color: #fff; /* テキストの色を白に設定 */
+  text-decoration: none; /* テキストの下線を削除 */
+  border-radius: 5px; /* 角を丸くする */
+  transition: background-color 0.3s; /* 背景色の変化にトランジションを設定 */
+}
+
+/* ブックシェルフボタンのホバー時のスタイル */
+.book-shelf-buttons .button:hover {
+  background-color: #333; /* ホバー時の背景色を暗くする */
+}
+
+/* ジャンプアニメーションのキーフレーム */
+@keyframes jump {
+  0%,
+  100% {
+    transform: scale(1); /* 通常のサイズ */
+  }
+  50% {
+    transform: scale(1.2); /* 拡大 */
+  }
+}
+
+/* ジャンプアニメーションを適用する要素のスタイル */
+.jumping {
+  animation: jump 3s ease-in-out; /* ジャンプアニメーションを設定 */
+}
+
+/* 画面の幅が768px以下の場合のメディアクエリ */
+@media screen and (max-width: 768px) {
+  /* ローディング画面を非表示に設定 */
+  .loading {
+    display: none; /* ローディング画面を非表示に */
+  }
+
+  /* ファーストビューテキストのスタイル調整 */
+  .first-view-text {
+    padding-left: 0; /* 左のパディングを削除 */
+    padding-right: 0; /* 右のパディングを削除 */
+    text-align: center; /* テキストを中央揃えに */
+  }
+
+  /* ファーストビューテキスト内のh1タグのスタイル調整 */
+  .first-view-text h1 {
+    font-size: 32px; /* フォントサイズを小さく */
+    line-height: 1.2; /* 行の高さを調整 */
+  }
+
+  /* ファーストビューテキスト内のpタグのスタイル調整 */
+  .first-view-text p {
+    font-size: 16px; /* フォントサイズを小さく */
+  }
+
+  /* サービス一覧グリッドを単一列に設定 */
+  .services-grid {
+    grid-template-columns: 1fr; /* 1列のグリッドに設定 */
+    width: 80%; /* 幅を80%に設定 */
+  }
+
+  /* サービスアイテムのスタイル調整 */
+  .service-item {
+    padding: 10px; /* パディングを小さく */
+    margin-bottom: 20px; /* 下のマージンを設定 */
+  }
+
+  /* サービスアイテム内のh3タグのスタイル調整 */
+  .service-item h3 {
+    font-size: 20px; /* フォントサイズを小さく */
+  }
+
+  /* コンテンツセクションのフレックスボックス設定を変更 */
+  .content {
+    display: flex; /* フレックスボックスを使用 */
+    flex-direction: column-reverse; /* アイテムを縦に並べる */
+    align-items: center; /* アイテムを中央に揃える */
+    justify-content: center; /* アイテムを中央に揃える */
+    text-align: center; /* テキストを中央揃えに */
+    height: auto; /* 高さを自動に設定 */
+    padding: 0 15px; /* 左右のパディングを設定 */
+  }
+
+  /* 画像のスタイルを変更 */
+  .image {
+    width: 100%; /* 幅を100%に設定 */
+    margin: 0; /* マージンをリセット */
+    opacity: 1; /* 透明度をリセット */
+    transform: none; /* 変形をリセット */
+  }
+
+  /* テキストブロックのスタイルを変更 */
+  .text {
+    width: 100%; /* 幅を100%に設定 */
+    margin: 0; /* マージンをリセット */
+    writing-mode: horizontal-tb; /* 横書きモードに設定 */
+  }
+
+  /* テキスト内のpタグのスタイルを変更 */
+  .text p {
+    text-align: center; /* テキストを中央揃えに */
+  }
+
+  /* メッセージのスタイルを変更 */
+  .message {
+    font-size: 2em; /* フォントサイズを小さく */
+    margin-top: 20px; /* 上のマージンを設定 */
+  }
+
+  /* about usボタンのスタイルを変更 */
+  .aboutus-button {
+    width: auto; /* 幅を自動に設定 */
+    position: static; /* 絶対位置を解除 */
+    margin: 10px auto; /* 上下のマージンを設定し、左右は自動で中央揃えに */
+  }
+
+  /* ラストビューセクションのスタイルを変更 */
+  .last-view {
+    background-size: contain; /* 背景画像のサイズを調整 */
+    padding: 50px 15px; /* パディングを調整 */
+  }
+
+  /* ラストビューセクション内のh2タグのスタイルを変更 */
+  .last-view-text h2 {
+    font-size: 1.5em; /* フォントサイズを小さく */
+  }
+
+  .last-view-text p {
+    font-size: 1em; /* フォントサイズを小さく */
+  }
+
+  /* トップに戻るボタンのスタイルを調整 */
+  #scrollToTopButton {
+    padding: 10px 20px; /* パディングを小さく */
+    font-size: 1em; /* フォントサイズを小さく */
+  }
+}
+@media screen and (max-width: 376px) {
+  /* 画像のマージンを調整 */
+  .image {
+    margin-top: 300px;
+  }
+}

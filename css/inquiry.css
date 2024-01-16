@@ -1,0 +1,192 @@
+@charset "utf-8"; /* 文字コードの設定（UTF-8） */
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.image img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain; /* 画像が親要素に収まるように */
+}
+
+/* マップスタイル */
+.map {
+  width: 90%; /* 幅を90%に設定 */
+  max-width: 1000px; /* 最大幅の設定 */
+  margin-top: 80px; /* 上側のマージン */
+  margin-left: auto; /* 左側のマージンを自動に設定 */
+  margin-right: auto; /* 右側のマージンを自動に設定 */
+}
+
+.heading {
+  padding: 0 2em 10px; /* 内側のパディングを設定 */
+  text-align: center; /* テキストを中央揃え */
+  background-image: repeating-linear-gradient(
+    -50deg,
+    rgb(0, 255, 47) 0px,
+    rgb(0, 255, 47) 3px,
+    rgba(0 0 0 / 0) 0%,
+    rgba(0 0 0 / 0) 60%
+  );
+  background-size: 10px 10px; /* 背景のサイズ */
+  background-repeat: repeat-x; /* 背景を水平方向に繰り返す */
+  background-position: center bottom; /* 背景の位置を下部中央に設定 */
+}
+
+.map iframe {
+  width: 100%; /* iframeの幅を100%に設定 */
+  height: 450px; /* iframeの高さを450pxに設定 */
+}
+
+/* 電話でのお問い合わせスタイル */
+.phone-inquiry {
+  background-color: #ffffff; /* 背景色 */
+  margin-bottom: 20px; /* 下部のマージン */
+  text-align: center; /* 中央揃え */
+}
+
+.phone-inquiry h2 {
+  margin-bottom: 10px; /* 下部のマージン */
+  font-size: 24px; /* フォントサイズ */
+}
+
+.phone-inquiry p {
+  margin-top: 10px; /* 上部のマージン */
+  font-size: 22px; /* フォントサイズ */
+}
+
+.phone-inquiry .phone-number {
+  font-size: 50px; /* 電話番号のフォントサイズ */
+  color: #09ff00; /* 電話番号の色 */
+}
+
+/* お問い合わせフォームスタイル */
+.contact-form {
+  background-color: #ffffff; /* 背景色 */
+  padding: 40px; /* パディング */
+  border-radius: 15px; /* 角の丸み */
+  width: 90%; /* 幅 */
+  max-width: 600px; /* 最大幅 */
+  margin: auto; /* 自動マージンで中央揃え */
+  margin-top: 70px; /* 上部のマージン */
+}
+
+.contact-form h2 {
+  text-align: center; /* 中央揃え */
+  margin-bottom: 20px; /* 下部のマージン */
+  font-size: 24px; /* フォントサイズ */
+}
+
+.contact-form label {
+  font-weight: bold; /* ラベルを太字に */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  background-color: #ffffff; /* 背景色 */
+  width: 100%; /* 幅を100%に設定 */
+  padding: 10px; /* 内側のパディング */
+  margin-bottom: 20px; /* 下部のマージン */
+  border: 1px solid #ccc; /* 枠線のスタイル */
+  border-radius: 4px; /* 角の丸み */
+}
+
+/* プライバシーポリシー同意セクションのスタイル */
+.privacy-policy-agreement {
+  display: flex; /* Flexboxを使用して要素を横に並べる */
+  align-items: center; /* アイテムを垂直方向の中央に配置 */
+  margin-bottom: 20px; /* 下部のマージン */
+}
+
+/* 必須テキストを赤字と太字に設定 */
+.privacy-policy-agreement .required-text {
+  margin-right: 5px; /* テキストとチェックボックスの間隔を設定 */
+  font-weight: bold; /* 太字に設定 */
+  white-space: nowrap; /* 折り返しを防ぐ */
+}
+
+/* "必須" のスタイル設定 */
+.privacy-policy-agreement .mandatory {
+  color: red; /* 色を赤に設定 */
+}
+
+/* チェックボックスのスタイル */
+.privacy-policy-agreement input[type="checkbox"] {
+  margin-top: 20px; /* 上部のマージン */
+  margin-left: 70px; /* チェックボックスの右のマージン */
+}
+
+/* ラベルのスタイル */
+.privacy-policy-agreement label {
+  text-align: center; /* テキストを中央揃え */
+  font-size: 14px; /* フォントサイズ */
+  margin-right: 5px; /* ラベルの右のマージン */
+  white-space: nowrap; /* 折り返しを防ぐ */
+}
+
+.privacy-policy-agreement label a {
+  color: blue; /* リンクの色 */
+  text-decoration: underline; /* 下線を引く */
+}
+
+/* フォーム要素のレスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .image img {
+    margin-top: 30px;
+    width: 150%;
+  }
+
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 16px; /* フォントサイズ */
+  }
+  /* プライバシーポリシー同意セクションのスタイル調整 */
+  .privacy-policy-agreement {
+    flex-direction: column; /* 要素を縦に並べる */
+    align-items: flex-start; /* アイテムを左側に揃える */
+    margin-bottom: 15px; /* 下部のマージンを調整 */
+  }
+
+  .privacy-policy-agreement input[type="checkbox"] {
+    margin-top: 10px;
+    margin-left: 0; /* チェックボックスのマージンを調整 */
+    width: 20px; /* チェックボックスのサイズを調整 */
+    height: 20px; /* チェックボックスのサイズを調整 */
+  }
+}
+
+.contact-form button {
+  background-color: blue; /* 背景色 */
+  color: #ffffff; /* 文字色 */
+  border: none; /* 枠線なし */
+  padding: 10px 20px; /* パディング */
+  cursor: pointer; /* カーソルスタイル */
+  width: 100%; /* 幅を100%に設定 */
+  border-radius: 4px; /* 角の丸み */
+  font-size: 18px; /* フォントサイズ */
+  transition: all 0.3s ease-in-out; /* トランジション効果 */
+}
+
+.contact-form button:hover {
+  transform: scale(1.1); /* ホバー時に少し大きくする */
+  background-color: red; /* ホバー時の背景色 */
+}
+
+.required-mark {
+  color: red; /* 必須マークの色 */
+}
+
+.optional-mark {
+  color: gray; /* 任意マークの色 */
+}
+
+.content-background {
+  background-color: lightblue; /* コンテンツの背景色 */
+}

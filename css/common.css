@@ -1,0 +1,211 @@
+@charset "utf-8"; /* 文字コードを指定 */
+
+/* リセットCSS(全体の要素に対してデフォルトのマージンやパディングをリセット) */
+*,
+::before,
+::after {
+  padding: 0; /* 内側の余白を0 */
+  margin: 0; /* 外側の余白を0 */
+  box-sizing: border-box; /* 要素の幅と高さの計算方法をボーダーボックスモデルに指定 */
+}
+
+ul,
+ol {
+  list-style: none; /* リストの行頭アイコンを非表示 */
+}
+
+a {
+  color: inherit; /* リンクの文字色を消去 */
+  text-decoration: none; /* リンクの下線を非表示 */
+}
+
+body {
+  font-size: 16px; /* テキストのフォントサイズを16px */
+  color: #000000; /* テキストの色を黒色 */
+  line-height: 1; /* テキストの行間を変更 */
+  background-color: white; /* 背景色を白色 */
+}
+
+img {
+  max-width: 100%; /* 画像が親要素を超えないように最大幅を100%に指定 */
+}
+
+.header-inner {
+  max-width: 1200px; /* ヘッダーの最大幅を1200px */
+  height: 110px; /* ヘッダーの高さを110px */
+  margin-left: auto; /* 左側の余白を自動で設定（中央寄せのため） */
+  margin-right: auto; /* 右側の余白を自動で設定（中央寄せのため） */
+  display: flex; /* Flexboxを使用して横並びのレイアウトを指定 */
+  justify-content: space-between; /* 要素間のスペースを最大化して左右に寄せる */
+  align-items: center; /* 子要素を上下方向に中央揃えにする */
+}
+
+.toggle-menu-button {
+  display: none; /* ハンバーガーメニューを非表示にする */
+}
+
+.header-logo {
+  display: block; /* ロゴをブロック要素として表示 */
+  width: 170px; /* ロゴの幅を170px */
+}
+/* ナビゲーションの項目を横並びにする */
+.site-menu ul {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  list-style: none;
+}
+/* ナビゲーションの項目間の余白を設定する */
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* ナビゲーションリンクのスタイル設定 */
+.nav-link a {
+  display: block; /* ブロック要素として表示 */
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s; /* 背景色がスムーズに変化するようにする */
+}
+
+.nav-link a:hover {
+  background-color: blue; /* ホバー時の背景色を青に設定 */
+  color: #fff; /* ホバー時のテキストの色を白に設定 */
+}
+
+.site-menu ul li a {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.site-menu ul li a span {
+  color: #6bfe03;
+}
+
+/* フッターの文字色と背景色，内側の上下の余白，各要素の配置，flexの方向を指定し，中央に揃えて配置する */
+.footer {
+  color: #ffffff;
+  background-color: #0066ff;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* フッターロゴのサイズと余白を調整する */
+.footer-logo {
+  display: block;
+  width: 235px;
+  margin-top: 70px;
+}
+
+/* 電話番号のスタイルを調整する */
+.footer-tel {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+/* 営業時間のスタイルを調整する */
+.footer-time {
+  font-size: 15px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+/* コピーライトのスタイルを調整する */
+.copyright {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li {
+    margin-top: 20px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 50px;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    position: relative;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #0066ff;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    transition: transform 0.3s;
+  }
+
+  .toggle-menu-button.open {
+    transform: rotate(90deg);
+  }
+
+  .main {
+    padding-top: 50px;
+  }
+
+  .footer-logo {
+    margin-top: 60px;
+  }
+
+  .footer-tel {
+    font-size: 20px;
+  }
+
+  .copyright {
+    margin-top: 50px;
+  }
+}

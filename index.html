@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文書のメタデータを設定する -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- サイトのタイトルを設定 -->
+    <title>〇〇〇〇株式会社::トップページ</title>
+
+    <!-- サイトの説明を設定 -->
+    <meta name="description" content="〇〇〇〇株式会社のトップページです。" />
+
+    <!-- 共通のスタイルシートを読み込む -->
+    <link href="./css/common.css" rel="stylesheet" />
+
+    <!-- このページ専用のスタイルシートを読み込む -->
+    <link href="./css/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ローディング画面用の要素を追加 -->
+    <div id="loading" class="loading">
+      <div class="loading-content">〇〇株式会社</div>
+    </div>
+
+    <!-- headerここから -->
+    <!-- CSSを記述するための目印を付ける-->
+    <header class="header">
+      <div class="header-inner">
+        <a class="header-logo" href="./index.html">
+          <img src="./images/common/logo-header.png" alt="会社のロゴ" />
+        </a>
+        <button class="toggle-menu-button"></button>
+        <div class="header-site-menu">
+          <nav class="site-menu">
+            <ul>
+              <li class="nav-link">
+                <a href="./index.html"><span>Top</span>トップ</a>
+              </li>
+              <li class="nav-link">
+                <a href="./service.html"
+                  ><span>Product&Service</span>製品・サービス</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="./about us.html"><span>About Us</span>会社概要</a>
+              </li>
+              <li class="nav-link">
+                <a href="./inquiry.php"><span>Contact Us</span>お問い合わせ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- headerここまで -->
+
+    <!-- 背景設定用のdiv -->
+    <div class="content-background">
+      <!-- mainここから -->
+      <main class="main">
+        <div class="first-view">
+          <div class="first-view-text">
+            <!-- ここにキャッチフレーズを書く -->
+            <h1>Driving Success through Technology</h1>
+            <p>テクノロジーで成功へと導きます</p>
+          </div>
+        </div>
+        <section class="services-overview">
+          <h2>Product&Service</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="./images/index/bat.png" alt="バット アイコン" />
+              </div>
+              <h3>バット</h3>
+              <p>野球</p>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img src="./images/index/fish.png" alt="魚 アイコン" />
+              </div>
+              <h3>魚</h3>
+              <p>鮮魚店</p>
+            </div>
+            <div class="service-item">
+              <div class="service-icon">
+                <img
+                  src="./images/index/game.png"
+                  alt="コントローラー アイコン"
+                />
+              </div>
+              <h3>ゲーム</h3>
+              <p>ゲームショップ</p>
+            </div>
+          </div>
+          <div class="service-contact-button">
+            <a href="./service.html">More</a>
+          </div>
+        </section>
+
+        <div class="content">
+          <div class="text">
+            <p>
+              テキストがここに入ります。<br />
+              (例)〇〇〇〇株式会社は、<br />
+              お客様に満足いただけるサービスの<br />
+              開発と提供に取り組んでおります。
+            </p>
+            <div class="aboutus-button">
+              <a href="./about us.html">会社概要</a>
+            </div>
+          </div>
+          <h1 class="message">About Us</h1>
+          <div class="image">
+            <!-- 画像のパスは適宜変更してください -->
+            <img src="./images/index/teamwork.jpg" alt="チームワーク" />
+          </div>
+        </div>
+        <!-- 続き -->
+        <div class="last-view">
+          <div class="last-view-text">
+            <!-- ここにキャッチフレーズを書く -->
+            <h2>Driving Success through Technology</h2>
+            <p>お気軽にお問い合わせください。</p>
+            <div class="book-shelf-buttons">
+              <a href="./inquiry.php" class="button">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- mainここまで -->
+    </div>
+
+    <!-- footerここから -->
+    <footer class="footer">
+      <nav class="site-menu">
+        <ul>
+          <li class="nav-link">
+            <a href="./index.html"><span>Top</span>トップ</a>
+          </li>
+          <li class="nav-link">
+            <a href="./service.html"
+              ><span>Product&Service</span>製品・サービス</a
+            >
+          </li>
+          <li class="nav-link">
+            <a href="./about us.html"><span>About Us</span>会社概要</a>
+          </li>
+          <li class="nav-link">
+            <a href="./inquiry.php"><span>Contact Us</span>お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="footer-logo" href="./index.html">
+        <img src="./images/common/logo-footer.png" alt="会社のロゴ" />
+      </a>
+      <!-- フッター内の情報 -->
+      <p class="footer-tel">TEL 01-2345-6789</p>
+      <p class="footer-time">勤務時間(営業時間):9:00~18:00</p>
+
+      <!-- "トップへ戻る"ボタン -->
+      <button id="scrollToTopButton" class="to-top" title="トップへ戻る">
+        Page Top
+      </button>
+
+      <!-- 著作権情報 -->
+      <p class="copyright"><small>&copy;〇〇〇〇株式会社</small></p>
+    </footer>
+    <!-- footerここまで -->
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="./js/action.js"></script>
+    <script src="./js/animation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* ヘッダー見出しのスタイリング */
+.heading {
+  background-color: lightblue; /* 背景色を設定 */
+  padding-top: 25px; /* 上のパディング */
+  padding-bottom: 15px; /* 下のパディング */
+  width: 100%; /* 幅を全体に設定 */
+  font-size: 28px; /* フォントサイズ */
+  text-align: center; /* テキストを中央揃え */
+  /* 背景にリニアグラデーションを設定 */
+  background-image: linear-gradient(
+    90deg,
+    #c7c7c7 0%,
+    #c7c7c7 34.5%,
+    #09ff00 34.5%,
+    #09ff00 65.5%,
+    #c7c7c7 65.5%,
+    #c7c7c7 100%
+  );
+  background-size: 100% 5px; /* 背景サイズを設定 */
+  background-repeat: no-repeat; /* 背景を繰り返さない */
+  background-position: center bottom; /* 背景位置を設定 */
+}
+
+/* 製品セクションのスタイリング */
+.products-section {
+  padding: 20px; /* パディング設定 */
+  max-width: 1200px; /* 最大幅を設定 */
+  margin: 0 auto; /* 水平方向の中央に配置 */
+}
+
+/* 製品カテゴリのスタイリング */
+.product-category {
+  margin-bottom: 40px; /* 下マージン */
+}
+
+/* 製品カテゴリ見出しのスタイリング */
+.product-category h2 {
+  background-color: #0066cc; /* 背景色 */
+  color: #fff; /* 文字色 */
+  padding: 10px 15px; /* パディング設定 */
+  border-radius: 3px; /* 角丸設定 */
+  font-size: 1.2em; /* フォントサイズ */
+}
+
+/* 製品リストのスタイリング */
+.product-list {
+  display: flex; /* フレックスボックスを使用 */
+  flex-wrap: wrap; /* 折り返しを許可 */
+  gap: 10px; /* アイテム間のギャップ */
+  margin-top: 20px; /* 上マージン */
+}
+
+/* 製品リストアイテムのスタイリング */
+.product-list a {
+  background-color: #e0e0e0; /* 背景色 */
+  padding: 10px 20px; /* パディング設定 */
+  border-radius: 3px; /* 角丸設定 */
+  transition: background-color 0.3s; /* 背景色のトランジション */
+}
+
+/* 製品リストアイテムのホバー時のスタイリング */
+.product-list a:hover {
+  background-color: #0066cc; /* 背景色を変更 */
+  color: #fff; /* 文字色を変更 */
+  text-decoration: none; /* テキスト装飾を無効化 */
+}
+
+/* ページネーションのスタイリング */
+.pagination {
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 中央揃え */
+  margin-top: 20px; /* 上マージン */
+}
+
+/* ページネーションリンクのスタイリング */
+.pagination a {
+  padding: 8px 12px; /* パディング設定 */
+  margin: 0 4px; /* マージン設定 */
+  border: 1px solid #ddd; /* ボーダー設定 */
+  text-decoration: none; /* テキスト装飾を無効化 */
+  color: black; /* 文字色 */
+}
+
+/* ページネーションリンクのホバー時のスタイリング */
+.pagination a:hover {
+  background-color: #eee; /* 背景色を変更 */
+}
+
+/* タブレットサイズのデバイスに対するメディアクエリ */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px; /* フォントサイズを調整 */
+    background-image: none; /* 背景画像を無効化 */
+    background-color: #09ff00; /* 背景色を変更 */
+  }
+  .products-section {
+    padding: 20px 10px; /* 左右のパディングを追加 */
+  }
+
+  .product-list {
+    justify-content: space-between; /* アイテム間に均等なスペースを追加 */
+  }
+
+  .product-list a {
+    flex: 1 1 auto; /* フレキシブルなボックスアイテムとして設定 */
+    margin: 5px; /* リストアイテム間にマージンを追加 */
+  }
+
+  .pagination {
+    padding: 0 10px; /* ページネーションの左右にパディングを追加 */
+  }
+}
